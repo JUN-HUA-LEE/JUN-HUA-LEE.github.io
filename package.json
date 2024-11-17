@@ -12,6 +12,7 @@
     "preview": "vite preview --port 8080"
   },
   "dependencies": {
+    "lenis": "^1.1.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0"
