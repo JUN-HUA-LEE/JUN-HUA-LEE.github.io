@@ -1,9 +1,16 @@
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const NotFound = () => {
   return (
-    <div className="flex justify-center items-center h-screen text-4xl">
-      404 - Page Not Found
-    </div>
+    <>
+      <Navbar />
+      <div className="flex justify-center items-center h-screen text-4xl bg-black text-white">
+        404 - Page Not Found
+      </div>
+      <Footer />
+    </>
+    
   );
 };
 

@@ -1,9 +1,15 @@
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const Projects = () => {
   return (
-    <div className="flex justify-center items-center h-screen text-4xl">
+    <>
+      <Navbar />
+      <div className="flex justify-center items-center h-screen text-4xl bg-black text-white">
         Projects
-    </div>
+      </div>
+      <Footer />
+    </>
   )
 }
 
