@@ -4,6 +4,7 @@
 
 html, html.lenis, html.lenis body {
     height: auto;
+    background-color: theme('colors.black-background');
   }
   
   html.lenis .lenis-smooth {
