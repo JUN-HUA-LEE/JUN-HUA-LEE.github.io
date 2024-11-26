@@ -1,4 +1,4 @@
-import { SparklesCore } from "../ui/Sparkles";
+import { SparklesCore } from "@/components/ui/Sparkles";
 
 const Hero = () => {
     return (
