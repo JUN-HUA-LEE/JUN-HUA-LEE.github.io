@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Lenis from "lenis";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -34,16 +34,15 @@ const App: React.FC = () => {
   const basename = import.meta.env.VITE_APP_BASENAME || '/';
 
   return (
-    <BrowserRouter basename={basename}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-	      <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+      <HashRouter basename={basename}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </HashRouter>
   );
 };
 
 export default App;
-
