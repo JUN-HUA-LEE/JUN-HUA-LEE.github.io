@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lenis from "lenis";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 
 const App: React.FC = () => {
@@ -34,14 +32,12 @@ const App: React.FC = () => {
   const basename = import.meta.env.VITE_APP_BASENAME || '/';
 
   return (
-      <HashRouter basename={basename}>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
   );
 };
 
