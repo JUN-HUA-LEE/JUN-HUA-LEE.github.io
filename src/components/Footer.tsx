@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SparklesCore } from "@/components/ui/Sparkles.tsx";  // Adjust the import path as necessary
+import { SparklesCore } from "@/components/ui/Sparkles.tsx";
 
 const Footer = () => {
     return (

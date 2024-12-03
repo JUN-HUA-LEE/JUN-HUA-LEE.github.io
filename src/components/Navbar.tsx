@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -39,20 +39,25 @@ const Navbar = () => {
           }`}
       >
         <div className="flex items-center gap-8">
-          {["Home", "About", "Projects"].map((item, index) => (
+          {[ "Experience", "Education"].map((item, index) => (
               <motion.div
                   key={index}
                   className="relative font-bold text-2xl text-white"
                   initial="hidden"
                   whileHover="visible"
               >
-                <Link to={item === "Home" ? "/" : `/${item.toLowerCase()}`} className="relative">
+                <ScrollLink
+                    to={item.toLowerCase()}
+                    smooth={true}
+                    duration={500}
+                    className="cursor-pointer relative"
+                >
                   {item}
                   <motion.div
                       className="absolute bottom-[-8px] left-0 h-[2px] bg-white"
                       variants={underlineVariants}
                   />
-                </Link>
+                </ScrollLink>
               </motion.div>
           ))}
         </div>
