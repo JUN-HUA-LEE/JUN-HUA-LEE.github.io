@@ -25,43 +25,43 @@ const Navbar = () => {
   }, []);
 
   const underlineVariants = {
-    hidden: { width: 0, left: "50%" },
-    visible: { width: "100%", left: 0, transition: { duration: 0.3 } }
+    hidden: { width: 0, left: '50%' },
+    visible: { width: '100%', left: 0, transition: { duration: 0.3 } },
   };
 
   return (
-      <motion.nav
-          initial={{ opacity: 1, y: 0 }}
-          animate={{ opacity: show ? 1 : 0, y: show ? 0 : -100 }}
-          transition={{ duration: 0.5 }}
-          className={`fixed top-0 left-0 w-full py-4 px-6 z-50 flex items-center justify-center shadow-md transition-all duration-300 ${
-              atTop ? 'bg-transparent' : 'bg-black bg-opacity-50'
-          }`}
-      >
-        <div className="flex items-center gap-8">
-          {[ "Experience", "Education"].map((item, index) => (
+    <motion.nav
+      initial={{ y: 0 }}
+      animate={{ y: show ? 0 : -100 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 w-full py-4 px-6 z-50 flex items-center justify-center shadow-md transition-all duration-300 ${
+        atTop ? 'bg-transparent' : 'bg-black bg-opacity-50'
+      }`}
+    >
+      <div className="flex items-center gap-8">
+        {['Experience', 'Education'].map((item, index) => (
+          <motion.div
+            key={index}
+            className="relative font-bold text-2xl text-white"
+            initial="hidden"
+            whileHover="visible"
+          >
+            <ScrollLink
+              to={item.toLowerCase()}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer relative"
+            >
+              {item}
               <motion.div
-                  key={index}
-                  className="relative font-bold text-2xl text-white"
-                  initial="hidden"
-                  whileHover="visible"
-              >
-                <ScrollLink
-                    to={item.toLowerCase()}
-                    smooth={true}
-                    duration={500}
-                    className="cursor-pointer relative"
-                >
-                  {item}
-                  <motion.div
-                      className="absolute bottom-[-8px] left-0 h-[2px] bg-white"
-                      variants={underlineVariants}
-                  />
-                </ScrollLink>
-              </motion.div>
-          ))}
-        </div>
-      </motion.nav>
+                className="absolute bottom-[-8px] left-0 h-[2px] bg-white"
+                variants={underlineVariants}
+              />
+            </ScrollLink>
+          </motion.div>
+        ))}
+      </div>
+    </motion.nav>
   );
 };
 
