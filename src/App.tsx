@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lenis from "lenis";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
+import Home from "@/components/Home";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -35,7 +34,6 @@ const App: React.FC = () => {
       <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
   );
