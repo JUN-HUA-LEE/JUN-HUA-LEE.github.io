@@ -9,6 +9,16 @@ export default {
       colors: {
         'black-background': '#000000',
       },
+      animation: {
+        gradient: "gradient 8s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
+      },
     },
   },
   plugins: [],

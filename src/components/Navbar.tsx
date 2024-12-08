@@ -23,7 +23,7 @@ const Navbar = () => {
         }`}
       >
         <ScrollLink to="home" smooth={true} duration={500} className="font-bold text-md text-white cursor-pointer">
-          Jun Hua &middot; Student
+          Jun Hua
         </ScrollLink>
         <div className="flex items-center gap-2 sm:gap-4 font-semibold text-md text-white">
           <ScrollLink
