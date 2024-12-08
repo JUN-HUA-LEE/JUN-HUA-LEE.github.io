@@ -4,8 +4,6 @@ import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 
 const Navbar = () => {
   const [atTop, setAtTop] = useState(true);
-  let lastScrollY = window.scrollY;
-
   const controlNavbar = () => {
     setAtTop(window.scrollY === 0);
   };
