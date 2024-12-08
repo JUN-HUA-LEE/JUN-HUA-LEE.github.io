@@ -16,16 +16,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 z-50 px-4 sm:px-0">
+    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 z-50 px-2 sm:px-4">
       <nav
-        className={`flex items-center justify-between shadow-md rounded-full border border-neutral-700 py-2 px-6 transition-all duration-300 ${
+        className={`flex items-center justify-between shadow-md rounded-full border border-neutral-700 py-2 sm:py-3 px-4 sm:px-6 transition-all duration-300 ${
           atTop ? 'bg-transparent' : 'bg-black bg-opacity-50'
         }`}
       >
-        <div className="font-bold text-md text-white">
-          Jun Hua Lee
-        </div>
-        <div className="flex items-center gap-4 font-semibold text-md text-neutral-400">
+        <ScrollLink to="home" smooth={true} duration={500} className="font-bold text-md text-white cursor-pointer">
+          Jun Hua &middot; Student
+        </ScrollLink>
+        <div className="flex items-center gap-2 sm:gap-4 font-semibold text-md text-white">
           <ScrollLink
             to="experience"
             smooth={true}

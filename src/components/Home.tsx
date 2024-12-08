@@ -7,7 +7,9 @@ import Edu from "@/components/Edu.tsx";
 const Home = () => {
   return (
     <>
-        <Navbar />
+        <div id="home">
+          <Navbar />
+        </div>
         <Hero />
         <Exp />
         <Edu />
